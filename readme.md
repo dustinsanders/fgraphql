@@ -24,6 +24,7 @@ Exposes functions that returns GraphQL types, all types are individually exporte
   * `union` or `gqlUnion`
 
 * **Schema**: passes along arguments and returns a new instance of the GraphQL schema
+  * `schema` or `gqlSchema`
 
 ## Support
 tested with `"graphql": "^0.7.1"`, graphql is a peer dependency
