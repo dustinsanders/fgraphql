@@ -1,0 +1,61 @@
+{
+  "name": "fgraphql",
+  "version": "1.0.0",
+  "description": "a functional wrapper around GraphQl types",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "lint": "eslint src/** test/**",
+    "test": "npm run lint && npm run test:only",
+    "test:only": "ava",
+    "test:watch": "ava -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustinsanders/fgraphql.git"
+  },
+  "keywords": [
+    "functional",
+    "gra",
+    "graphql",
+    "types"
+  ],
+  "author": "Dustin Sanders",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dustinsanders/fgraphql/issues"
+  },
+  "homepage": "https://github.com/dustinsanders/fgraphql#readme",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "eslint": "^3.6.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-config-wyze": "^3.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "eslint-plugin-wyze": "^2.0.0",
+    "graphql": "^0.7.1"
+  },
+  "peerDependencies": {
+    "graphql": "0.x"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "wyze",
+    "rules": {
+      "id-blacklist": 0,
+      "wyze/max-file-length": 0
+    }
+  }
+}
