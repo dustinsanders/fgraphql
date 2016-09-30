@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
+    "clean": "rm -rf dist",
     "lint": "eslint src/** test/**",
+    "preversion": "npm run clean && npm run test && npm run build",
     "test": "npm run lint && npm run test:only",
     "test:only": "ava",
     "test:watch": "ava -w"
