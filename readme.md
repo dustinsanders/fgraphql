@@ -1,4 +1,6 @@
 # fGraphQL
+[![Build Status][travis-image]][travis-url]
+
 fGraphQL is a functional wrapper around GraphQL that allows all types to be used as functions, more information about GraphQL types can be found [here](http://graphql.org/graphql-js/type/).
 
 ## Installation
@@ -34,4 +36,5 @@ tested with `"graphql": "^0.7.1"`, graphql is a peer dependency
 ## TODO
 * Examples
 
-
+[travis-image]: https://img.shields.io/travis/dustinsanders/fgraphql.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dustinsanders/fgraphql
