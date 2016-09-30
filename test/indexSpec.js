@@ -14,7 +14,8 @@ import {
   GraphQLString,
   GraphQLUnionType,
  } from 'graphql'
-import {
+import { test } from 'ava'
+import fgql, {
   boolean,
   enumerable,
   float,
@@ -44,7 +45,7 @@ import {
   string,
   union,
 } from '../src/index'
-import { test } from 'ava'
+import keys from 'lodash/keys'
 
 const scalarMacro = ( t, fn, GQL ) => {
   t.deepEqual(fn(), GQL)
@@ -225,3 +226,40 @@ const schemaConfig = {
 
 test('schema', definitionMacro, schema, GraphQLSchema, schemaConfig)
 test('gqlSchema', definitionMacro, gqlSchema, GraphQLSchema, schemaConfig)
+
+test('default export has correct keys', t => {
+  const expected = [
+    'boolean',
+    'gqlBoolean',
+    'float',
+    'gqlFloat',
+    'id',
+    'gqlId',
+    'int',
+    'gqlInt',
+    'string',
+    'gqlString',
+    'enumerable',
+    'enum',
+    'gqlEnum',
+    'inputObject',
+    'gqlInputObject',
+    'interfaceType',
+    'interface',
+    'gqlInterface',
+    'list',
+    'gqlList',
+    'nonNull',
+    'gqlNonNull',
+    'object',
+    'gqlObject',
+    'scalar',
+    'gqlScalar',
+    'schema',
+    'gqlSchema',
+    'union',
+    'gqlUnion',
+  ]
+
+  t.deepEqual(keys(fgql), expected)
+})

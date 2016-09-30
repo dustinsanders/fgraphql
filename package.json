@@ -39,7 +39,8 @@
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
     "eslint-plugin-wyze": "^2.0.0",
-    "graphql": "^0.7.1"
+    "graphql": "^0.7.1",
+    "lodash": "^4.16.2"
   },
   "peerDependencies": {
     "graphql": "0.x"
