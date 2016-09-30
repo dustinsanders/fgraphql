@@ -6,14 +6,14 @@ fGraphQL is a functional wrapper around GraphQL that allows all types to be used
 
 ## API
 Exposes functions that returns GraphQL types, all types are individually exported as well as being attached to default export.
-* Scalar: returns GraphQL type
+* **Scalar**: returns GraphQL type
   * `boolean` or `gqlBoolean`
   * `float` or `gqlFloat`
   * `id` or `gqlId`
   * `int` or `gqlInt`
   * `string` or `gqlStrin`
 
-* Definition: passes along arguments and returns a new instance of the GraphQL class
+* **Definition**: passes along arguments and returns a new instance of the GraphQL class
   * `enumerable` or `gqlEnum` (additionally `enum` is availble on the default export)
   * `inputObject` or `gqlInputObject`
   * `interfaceType` or `gqlInterfaceType` (additionally `interface` is availble on default export)
@@ -23,7 +23,7 @@ Exposes functions that returns GraphQL types, all types are individually exporte
   * `scalar` or `gqlScalar`
   * `union` or `gqlUnion`
 
-* Schema: passes along arguments and returns a new instance of the GraphQL schema
+* **Schema**: passes along arguments and returns a new instance of the GraphQL schema
 
 ## Support
 tested with `"graphql": "^0.7.1"`, graphql is a peer dependency
