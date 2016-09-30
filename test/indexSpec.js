@@ -10,6 +10,7 @@ import {
   GraphQLNonNull,
   GraphQLObjectType,
   GraphQLScalarType,
+  GraphQLSchema,
   GraphQLString,
   GraphQLUnionType,
  } from 'graphql'
@@ -28,6 +29,7 @@ import {
   gqlNonNull,
   gqlObject,
   gqlScalar,
+  gqlSchema,
   gqlString,
   gqlUnion,
   id,
@@ -38,6 +40,7 @@ import {
   nonNull,
   object,
   scalar,
+  schema,
   string,
   union,
 } from '../src/index'
@@ -204,3 +207,21 @@ const unionConfig = {
 
 test('union', definitionMacro, union, GraphQLUnionType, unionConfig)
 test('gqlUnion', definitionMacro, gqlUnion, GraphQLUnionType, unionConfig)
+
+const schemaConfig = {
+  query: new GraphQLObjectType({
+    name: 'Query',
+    fields: {
+      user: {
+        type: GraphQLString,
+        args: {
+          id: { type: GraphQLString },
+        },
+        resolve: () => 'my user',
+      },
+    },
+  }),
+}
+
+test('schema', definitionMacro, schema, GraphQLSchema, schemaConfig)
+test('gqlSchema', definitionMacro, gqlSchema, GraphQLSchema, schemaConfig)

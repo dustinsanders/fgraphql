@@ -10,6 +10,7 @@ import {
   GraphQLNonNull,
   GraphQLObjectType,
   GraphQLScalarType,
+  GraphQLSchema,
   GraphQLString,
   GraphQLUnionType,
  } from 'graphql'
@@ -58,6 +59,10 @@ export const gqlScalar = scalar
 export const union = makeTypeFn(GraphQLUnionType)
 export const gqlUnion = union
 
+// Schema
+export const schema = makeTypeFn(GraphQLSchema)
+export const gqlSchema = schema
+
 export default {
   boolean,
   gqlBoolean,
@@ -85,6 +90,8 @@ export default {
   gqlObject,
   scalar,
   gqlScalar,
+  schema,
+  gqlSchema,
   union,
   gqlUnion,
 }
