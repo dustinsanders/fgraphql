@@ -6,8 +6,7 @@
 `$ npm install fgraphql graphql`
 
 ## fGraphQl API
-exposes functions that returns GraphQL types
-all types are individually exported as well as being attached to default export
+Exposes functions that returns GraphQL types, all types are individually exported as well as being attached to default export
 * Scalar: returns GraphQL type
   * `boolean` or `gqlBoolean`
   * `float` or `gqlFloat`
