@@ -11,12 +11,12 @@ Exposes functions that returns GraphQL types, all types are individually exporte
   * `float` or `gqlFloat`
   * `id` or `gqlId`
   * `int` or `gqlInt`
-  * `string` or `gqlStrin`
+  * `string` or `gqlString`
 
 * **Definition**: passes along arguments and returns a new instance of the GraphQL class
-  * `enumerable` or `gqlEnum` (additionally `enum` is availble on the default export)
+  * `enumerable` or `gqlEnum` (additionally `enum` is available on the default export)
   * `inputObject` or `gqlInputObject`
-  * `interfaceType` or `gqlInterfaceType` (additionally `interface` is availble on default export)
+  * `interfaceType` or `gqlInterfaceType` (additionally `interface` is available on default export)
   * `list` or `gqlList`
   * `nonNull` or `gqlNonNull`
   * `object` or `gqlObject`
