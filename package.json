@@ -1,6 +1,6 @@
 {
   "name": "fgraphql",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a functional wrapper around GraphQl types",
   "main": "dist/index.js",
   "scripts": {
