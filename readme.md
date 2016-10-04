@@ -7,7 +7,7 @@ fGraphQL is a functional wrapper around GraphQL that allows all types to be used
 `$ npm install fgraphql graphql`
 
 ## API
-Exposes functions that returns GraphQL types, all types are individually exported as well as being attached to default export.
+Exposes functions that return GraphQL types, all types are individually exported as well as being attached to default export.
 * **Scalar**: returns GraphQL type
   * `boolean` or `gqlBoolean`
   * `float` or `gqlFloat`
